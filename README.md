@@ -6,11 +6,9 @@ This is the starter code for the Route Planning project. Instructions for each e
 
 When cloning this project, be sure to use the `--recurse-submodules` flag. Using HTTPS:
 ```
-git clone https://github.com/udacity/CppND-Route-Planning-Project.git --recurse-submodules
+git clone https:https://github.com/IbrahimHabib/OpenStreetMap.git
 ```
-or with SSH:
-```
-git clone git@github.com:udacity/CppND-Route-Planning-Project.git --recurse-submodules
+
 ```
 
 ## Compiling and Running
