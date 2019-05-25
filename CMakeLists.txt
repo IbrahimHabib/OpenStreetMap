@@ -24,7 +24,7 @@ set(LIBRARY_OUTPUT_PATH "${MAINFOLDER}/lib")
 #
 # Locate Project Prerequisites
 #
-find_package(io2d REQUIRED PATHS /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project/cmake/P0267_RefImpl/Debug/P0267_RefImpl/P0267_RefImpl/CMakeFiles/Export/lib/cmake/io2d)
+find_package(io2d REQUIRED PATHS cmake/io2d)
 find_package(Cairo)
 find_package(GraphicsMagick)
 
