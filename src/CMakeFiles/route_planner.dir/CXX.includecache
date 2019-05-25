@@ -6,22 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap/src/model.cpp
-model.h
-/home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap/src/model.h
-pugixml.hpp
-/home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap/src/pugixml.hpp
-iostream
--
-string_view
--
-cmath
--
-algorithm
--
-assert.h
--
-
 /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap/src/model.h
 vector
 -
@@ -30,12 +14,6 @@ unordered_map
 string
 -
 cstddef
--
-
-/home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap/src/route_model.cpp
-route_model.h
-/home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap/src/route_model.h
-iostream
 -
 
 /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap/src/route_model.h
@@ -65,20 +43,4 @@ string
 -
 route_model.h
 /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap/src/route_model.h
-
-src/../thirdparty/pugixml/src/pugiconfig.hpp
-
-src/../thirdparty/pugixml/src/pugixml.hpp
-pugiconfig.hpp
-src/../thirdparty/pugixml/src/pugiconfig.hpp
-stddef.h
--
-exception
--
-iterator
--
-iosfwd
--
-string
--
 
