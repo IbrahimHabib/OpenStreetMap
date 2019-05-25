@@ -82,7 +82,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/route_planner.dir/DependInfo.cmake"
-  "src/CMakeFiles/CppND-Route-Planning-Project.dir/DependInfo.cmake"
+  "src/CMakeFiles/OpenStreetMap.dir/DependInfo.cmake"
   "test/CMakeFiles/test.dir/DependInfo.cmake"
   "thirdparty/pugixml/CMakeFiles/pugixml.dir/DependInfo.cmake"
   "thirdparty/googletest/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"

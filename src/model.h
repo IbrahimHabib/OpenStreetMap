@@ -8,7 +8,7 @@
 class Model
 {
 public:
-    struct Node {
+    struct Node { 
         double x = 0.f;
         double y = 0.f;
     };

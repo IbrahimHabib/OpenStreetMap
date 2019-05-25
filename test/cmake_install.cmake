@@ -1,4 +1,4 @@
-# Install script for directory: /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project/test
+# Install script for directory: /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

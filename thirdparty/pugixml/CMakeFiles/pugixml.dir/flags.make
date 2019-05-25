@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++1z
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project/thirdparty/pugixml/src 
+CXX_INCLUDES = -I/home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap/thirdparty/pugixml/src 
 

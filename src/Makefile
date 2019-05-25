@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project
+CMAKE_SOURCE_DIR = /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project
+CMAKE_BINARY_DIR = /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -91,6 +91,18 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -112,28 +124,16 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # The main all target
 all: cmake_check_build_system
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(CMAKE_COMMAND) -E cmake_progress_start /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project/CMakeFiles /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project/src/CMakeFiles/progress.marks
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project/CMakeFiles 0
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(CMAKE_COMMAND) -E cmake_progress_start /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap/CMakeFiles /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap/src/CMakeFiles/progress.marks
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/route_planner.dir/rule:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/route_planner.dir/rule
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/route_planner.dir/rule
 .PHONY : src/CMakeFiles/route_planner.dir/rule
 
 # Convenience name for target.
@@ -168,23 +168,23 @@ route_planner: src/CMakeFiles/route_planner.dir/rule
 
 # fast build rule for target.
 route_planner/fast:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/build
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/build
 .PHONY : route_planner/fast
 
 # Convenience name for target.
-src/CMakeFiles/CppND-Route-Planning-Project.dir/rule:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/CppND-Route-Planning-Project.dir/rule
-.PHONY : src/CMakeFiles/CppND-Route-Planning-Project.dir/rule
+src/CMakeFiles/OpenStreetMap.dir/rule:
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/OpenStreetMap.dir/rule
+.PHONY : src/CMakeFiles/OpenStreetMap.dir/rule
 
 # Convenience name for target.
-CppND-Route-Planning-Project: src/CMakeFiles/CppND-Route-Planning-Project.dir/rule
+OpenStreetMap: src/CMakeFiles/OpenStreetMap.dir/rule
 
-.PHONY : CppND-Route-Planning-Project
+.PHONY : OpenStreetMap
 
 # fast build rule for target.
-CppND-Route-Planning-Project/fast:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/CppND-Route-Planning-Project.dir/build.make src/CMakeFiles/CppND-Route-Planning-Project.dir/build
-.PHONY : CppND-Route-Planning-Project/fast
+OpenStreetMap/fast:
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/OpenStreetMap.dir/build.make src/CMakeFiles/OpenStreetMap.dir/build
+.PHONY : OpenStreetMap/fast
 
 main.o: main.cpp.o
 
@@ -192,7 +192,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/CppND-Route-Planning-Project.dir/build.make src/CMakeFiles/CppND-Route-Planning-Project.dir/main.cpp.o
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/OpenStreetMap.dir/build.make src/CMakeFiles/OpenStreetMap.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -201,7 +201,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/CppND-Route-Planning-Project.dir/build.make src/CMakeFiles/CppND-Route-Planning-Project.dir/main.cpp.i
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/OpenStreetMap.dir/build.make src/CMakeFiles/OpenStreetMap.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -210,7 +210,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/CppND-Route-Planning-Project.dir/build.make src/CMakeFiles/CppND-Route-Planning-Project.dir/main.cpp.s
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/OpenStreetMap.dir/build.make src/CMakeFiles/OpenStreetMap.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 model.o: model.cpp.o
@@ -219,8 +219,8 @@ model.o: model.cpp.o
 
 # target to build an object file
 model.cpp.o:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/model.cpp.o
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/CppND-Route-Planning-Project.dir/build.make src/CMakeFiles/CppND-Route-Planning-Project.dir/model.cpp.o
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/model.cpp.o
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/OpenStreetMap.dir/build.make src/CMakeFiles/OpenStreetMap.dir/model.cpp.o
 .PHONY : model.cpp.o
 
 model.i: model.cpp.i
@@ -229,8 +229,8 @@ model.i: model.cpp.i
 
 # target to preprocess a source file
 model.cpp.i:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/model.cpp.i
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/CppND-Route-Planning-Project.dir/build.make src/CMakeFiles/CppND-Route-Planning-Project.dir/model.cpp.i
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/model.cpp.i
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/OpenStreetMap.dir/build.make src/CMakeFiles/OpenStreetMap.dir/model.cpp.i
 .PHONY : model.cpp.i
 
 model.s: model.cpp.s
@@ -239,8 +239,8 @@ model.s: model.cpp.s
 
 # target to generate assembly for a file
 model.cpp.s:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/model.cpp.s
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/CppND-Route-Planning-Project.dir/build.make src/CMakeFiles/CppND-Route-Planning-Project.dir/model.cpp.s
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/model.cpp.s
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/OpenStreetMap.dir/build.make src/CMakeFiles/OpenStreetMap.dir/model.cpp.s
 .PHONY : model.cpp.s
 
 render.o: render.cpp.o
@@ -249,7 +249,7 @@ render.o: render.cpp.o
 
 # target to build an object file
 render.cpp.o:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/CppND-Route-Planning-Project.dir/build.make src/CMakeFiles/CppND-Route-Planning-Project.dir/render.cpp.o
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/OpenStreetMap.dir/build.make src/CMakeFiles/OpenStreetMap.dir/render.cpp.o
 .PHONY : render.cpp.o
 
 render.i: render.cpp.i
@@ -258,7 +258,7 @@ render.i: render.cpp.i
 
 # target to preprocess a source file
 render.cpp.i:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/CppND-Route-Planning-Project.dir/build.make src/CMakeFiles/CppND-Route-Planning-Project.dir/render.cpp.i
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/OpenStreetMap.dir/build.make src/CMakeFiles/OpenStreetMap.dir/render.cpp.i
 .PHONY : render.cpp.i
 
 render.s: render.cpp.s
@@ -267,7 +267,7 @@ render.s: render.cpp.s
 
 # target to generate assembly for a file
 render.cpp.s:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/CppND-Route-Planning-Project.dir/build.make src/CMakeFiles/CppND-Route-Planning-Project.dir/render.cpp.s
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/OpenStreetMap.dir/build.make src/CMakeFiles/OpenStreetMap.dir/render.cpp.s
 .PHONY : render.cpp.s
 
 route_model.o: route_model.cpp.o
@@ -276,8 +276,8 @@ route_model.o: route_model.cpp.o
 
 # target to build an object file
 route_model.cpp.o:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/route_model.cpp.o
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/CppND-Route-Planning-Project.dir/build.make src/CMakeFiles/CppND-Route-Planning-Project.dir/route_model.cpp.o
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/route_model.cpp.o
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/OpenStreetMap.dir/build.make src/CMakeFiles/OpenStreetMap.dir/route_model.cpp.o
 .PHONY : route_model.cpp.o
 
 route_model.i: route_model.cpp.i
@@ -286,8 +286,8 @@ route_model.i: route_model.cpp.i
 
 # target to preprocess a source file
 route_model.cpp.i:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/route_model.cpp.i
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/CppND-Route-Planning-Project.dir/build.make src/CMakeFiles/CppND-Route-Planning-Project.dir/route_model.cpp.i
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/route_model.cpp.i
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/OpenStreetMap.dir/build.make src/CMakeFiles/OpenStreetMap.dir/route_model.cpp.i
 .PHONY : route_model.cpp.i
 
 route_model.s: route_model.cpp.s
@@ -296,8 +296,8 @@ route_model.s: route_model.cpp.s
 
 # target to generate assembly for a file
 route_model.cpp.s:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/route_model.cpp.s
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/CppND-Route-Planning-Project.dir/build.make src/CMakeFiles/CppND-Route-Planning-Project.dir/route_model.cpp.s
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/route_model.cpp.s
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/OpenStreetMap.dir/build.make src/CMakeFiles/OpenStreetMap.dir/route_model.cpp.s
 .PHONY : route_model.cpp.s
 
 route_planner.o: route_planner.cpp.o
@@ -306,8 +306,8 @@ route_planner.o: route_planner.cpp.o
 
 # target to build an object file
 route_planner.cpp.o:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/route_planner.cpp.o
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/CppND-Route-Planning-Project.dir/build.make src/CMakeFiles/CppND-Route-Planning-Project.dir/route_planner.cpp.o
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/route_planner.cpp.o
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/OpenStreetMap.dir/build.make src/CMakeFiles/OpenStreetMap.dir/route_planner.cpp.o
 .PHONY : route_planner.cpp.o
 
 route_planner.i: route_planner.cpp.i
@@ -316,8 +316,8 @@ route_planner.i: route_planner.cpp.i
 
 # target to preprocess a source file
 route_planner.cpp.i:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/route_planner.cpp.i
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/CppND-Route-Planning-Project.dir/build.make src/CMakeFiles/CppND-Route-Planning-Project.dir/route_planner.cpp.i
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/route_planner.cpp.i
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/OpenStreetMap.dir/build.make src/CMakeFiles/OpenStreetMap.dir/route_planner.cpp.i
 .PHONY : route_planner.cpp.i
 
 route_planner.s: route_planner.cpp.s
@@ -326,8 +326,8 @@ route_planner.s: route_planner.cpp.s
 
 # target to generate assembly for a file
 route_planner.cpp.s:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/route_planner.cpp.s
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(MAKE) -f src/CMakeFiles/CppND-Route-Planning-Project.dir/build.make src/CMakeFiles/CppND-Route-Planning-Project.dir/route_planner.cpp.s
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/route_planner.dir/build.make src/CMakeFiles/route_planner.dir/route_planner.cpp.s
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(MAKE) -f src/CMakeFiles/OpenStreetMap.dir/build.make src/CMakeFiles/OpenStreetMap.dir/route_planner.cpp.s
 .PHONY : route_planner.cpp.s
 
 # Help Target
@@ -340,10 +340,10 @@ help:
 	@echo "... install/local"
 	@echo "... route_planner"
 	@echo "... rebuild_cache"
-	@echo "... CppND-Route-Planning-Project"
+	@echo "... OpenStreetMap"
+	@echo "... install"
 	@echo "... edit_cache"
 	@echo "... list_install_components"
-	@echo "... install"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -370,6 +370,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

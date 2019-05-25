@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project
+CMAKE_SOURCE_DIR = /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project
+CMAKE_BINARY_DIR = /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,9 +126,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project/CMakeFiles /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap/CMakeFiles /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/CppND-Route-Planning-Project/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hima/C++/C++NanoDegree/projects/OpenStreetMap-Route-Planner/OpenStreetMap/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -170,17 +170,17 @@ route_planner/fast:
 .PHONY : route_planner/fast
 
 #=============================================================================
-# Target rules for targets named CppND-Route-Planning-Project
+# Target rules for targets named OpenStreetMap
 
 # Build rule for target.
-CppND-Route-Planning-Project: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 CppND-Route-Planning-Project
-.PHONY : CppND-Route-Planning-Project
+OpenStreetMap: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 OpenStreetMap
+.PHONY : OpenStreetMap
 
 # fast build rule for target.
-CppND-Route-Planning-Project/fast:
-	$(MAKE) -f src/CMakeFiles/CppND-Route-Planning-Project.dir/build.make src/CMakeFiles/CppND-Route-Planning-Project.dir/build
-.PHONY : CppND-Route-Planning-Project/fast
+OpenStreetMap/fast:
+	$(MAKE) -f src/CMakeFiles/OpenStreetMap.dir/build.make src/CMakeFiles/OpenStreetMap.dir/build
+.PHONY : OpenStreetMap/fast
 
 #=============================================================================
 # Target rules for targets named test
@@ -273,7 +273,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... route_planner"
-	@echo "... CppND-Route-Planning-Project"
+	@echo "... OpenStreetMap"
 	@echo "... test"
 	@echo "... pugixml"
 	@echo "... gmock_main"
