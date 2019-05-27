@@ -2,9 +2,9 @@
 #include <iostream>
 
 RouteModel::RouteModel(const std::vector<std::byte> &xml) : Model(xml) {
+int counter = 0;
 for (Model::Node node : this->Nodes())
 {
-   int counter = 0;
    m_Nodes.push_back(Node(counter,this,node));
    counter++;
 }
@@ -38,7 +38,7 @@ RouteModel::Node* RouteModel::Node::FindNeighbor (std::vector<int> node_indices)
    for (int node_index : node_indices)
    {
       node = parent_model->SNodes()[node_index] ;
-      if (this->distance(node) > 0 && !node.visted)
+      if (this->distance(node) != 0 && !node.visited)
       {
          if (closest_node == nullptr || this->distance(node) < this->distance(*closest_node)) 
          {
@@ -46,7 +46,7 @@ RouteModel::Node* RouteModel::Node::FindNeighbor (std::vector<int> node_indices)
          }
          
       }
-      
+
    }
    return closest_node;
 }
@@ -55,9 +55,10 @@ void RouteModel::Node::FindNeighbors()
    for (auto &road : parent_model->node_to_road[this->index])
    {
      RouteModel::Node* new_neighbor = this->FindNeighbor(parent_model->Ways()[road->way].nodes);
+     
      if (new_neighbor)
      {
-        this->neighbors.push_back(new_neighbor);
+        this->neighbors.emplace_back(new_neighbor);
      }
      
    }
@@ -72,7 +73,7 @@ RouteModel::Node &RouteModel::FindClosestNode(float x , float y)
   float min_dist = std::numeric_limits<float>::max();
   int closest_idx;
   float dist;
-  for (auto &road : Roads() )
+  for (const Model::Road &road : Roads() )
   {
      if (road.type != Model::Road::Type::Footway)
      {

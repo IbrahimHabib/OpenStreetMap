@@ -19,11 +19,12 @@ class RouteModel : public Model {
         Node* parent = nullptr;
         float h_value = std::numeric_limits<float>::max();
         float g_value = 0.0;
-        bool visted = false;
-        std::vector<Node*> neighbors;
+        bool visited = false;
+        std::vector<Node *> neighbors;
         float distance (Node other) const
         {
-            return std::sqrt(std::pow((x-other.x),2) + std::pow((y-other.y),2));
+            //std::cout<<other.x<<":"<<other.y<<std::endl;
+            return std::sqrt((x-other.x) * (x-other.x) + (y - other.y) * (y-other.y));
         }
         void FindNeighbors();
       private:
