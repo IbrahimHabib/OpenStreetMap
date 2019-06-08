@@ -54,17 +54,53 @@ int main(int argc, const char **argv)
     // user input for these values using std::cin. Pass the user input to the
     // RoutePlanner object below.
     float start_x, start_y, end_x, end_y;
-    std::cin>>start_x>>start_y>>end_x>>end_y;
+    std::cout<<"The map coordinates are between (0,0) & (100,100)."<<std::endl;
+    std::cout<<"Please enter start x between 0 & 100: ";
+    std::cin>>start_x;
+    std::cout<<"Please enter Start y between 0 & 100: ";
+    std::cin>>start_y;
+    std::cout<<"Please enter end x between 0 & 100: ";
+    std::cin>>end_x;
+    std::cout<<"Please enter end y between 0 & 100: ";
+    std::cin>>end_y;
     // Build Model.
     RouteModel model{osm_data};
-
+    if(start_x > 0 && start_x < 100 ){
+        std::cout<<"Valid start_x coordinate "<<std::endl;
+}
+else
+{
+    std::cout<<"Invalid start_x coordinate and start_x will be set to 1"<<std::endl;
+    start_x=1;
+}
+if(start_y > 0 && start_y < 100 ){
+        std::cout<<"Valid start_y coordinate "<<std::endl;
+}
+else
+{
+    std::cout<<"Invalid start_y coordinate and start_y will be set to 1"<<std::endl;
+    start_y=1;
+}
+ if(end_x > 0 && end_x < 100 ){
+        std::cout<<"Valid end_x coordinate "<<std::endl;
+}
+else
+{
+    std::cout<<"Invalid end_x coordinate and end_x will be set to 99"<<std::endl;
+    end_x=99;
+}
+if(end_y > 0 && end_y < 100 ){
+        std::cout<<"Valid end_y coordinate "<<std::endl;
+}
+else
+{
+    std::cout<<"Invalid end_y coordinate and end_x will be set to 99"<<std::endl;
+    end_y=99;
+}
     // Perform search and render results.
     RoutePlanner route_planner{model, start_x, start_y, end_x, end_y};
     route_planner.AStarSearch();
-    /*std::cout<<model.path.size()<<std::endl;
-    for(auto node: model.path){
-        std::cout<<node.x<<":"<<node.y<<std::endl;
-    }*/
+   
     std::cout<<"Distance:"<<route_planner.GetDistance()<<"\n";
 
     Render render{model};
